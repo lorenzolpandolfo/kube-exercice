@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-service
+spec:
+  selector:
+    app: rabbitmq
+  ports:
+    - port: 5672  # Porta do RabbitMQ
+      targetPort: 5672
+      name: rabbit
+    - port: 15672 # Porta do painel de administração
+      targetPort: 15672
+      name: rabbit-admin
+
