@@ -2,7 +2,7 @@
 
 ### Objetivo:
 -  Criar um cluster Kubernetes com o Kind.
-- Deploy de uma aplicação web simples com Nginx e um container de backend com Node.js.
+- Deploy de um backend com Node.js.
 - Configurar um Service para expor a aplicação externamente.
 - Testar o acesso à aplicação.
 
