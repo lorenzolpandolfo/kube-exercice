@@ -42,4 +42,5 @@
 ### Comandos úteis
 - `kubectl get pods`
 - `kubectl get svc`
-
+- `kind get clusters`
+- `kind delete cluster --name <cluster>`
