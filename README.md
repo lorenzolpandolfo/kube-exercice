@@ -44,3 +44,14 @@
 - `kubectl get svc`
 - `kind get clusters`
 - `kind delete cluster --name <cluster>`
+
+### Extras
+
+## Deployment e Service
+| Característica        | **Deployment**                                          | **Service**                                               |
+|-----------------------|---------------------------------------------------------|-----------------------------------------------------------|
+| **Objetivo**           | Gerenciar o ciclo de vida dos pods (criação, escala, atualização). | Expor os pods e fornecer um ponto de acesso estável.       |
+| **Responsabilidade**   | Garantir que os pods corretos e as réplicas estejam em execução. | Direcionar o tráfego de rede para os pods correspondentes. |
+| **Exposição Externa**  | Não expõe os pods diretamente ao tráfego externo.      | Pode expor os pods externamente (via NodePort, LoadBalancer, etc.). |
+| **Criação de Pods**    | Cria e gerencia pods.                                   | Não cria pods, apenas mapeia os pods existentes.           |
+| **Uso**                | Usado para garantir que a aplicação esteja sempre disponível. | Usado para fornecer um ponto de entrada para acessar a aplicação. |
