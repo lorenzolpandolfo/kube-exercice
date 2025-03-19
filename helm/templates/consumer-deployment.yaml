@@ -14,5 +14,9 @@ spec:
     spec:
       containers:
       - name: consumer
-        image: consumer:latest
+        image: consumer:{{ .Values.image.tag }}
         imagePullPolicy: IfNotPresent
+        env:
+        - name: RABBITMQ_URL
+          value: "amqp://rabbitmq.default.svc.cluster.local"
+

@@ -1,4 +1,23 @@
 ## 💡 Criando uma aplicação simples com Kubernetes
+Adicionando o Helm
+
+Nessa branch, com base no exercício 2, adicionar o helm para facilitar:
+
+1. Instalar o helm
+
+    `sudo dnf install helm`
+
+2. Instalar o chart do rabbit:
+
+    (O cluster deve estar criado)
+    ```
+    helm repo add bitnami https://charts.bitnami.com/bitnami
+    helm install rabbitmq bitnami/rabbitmq
+    ```
+    Assim não é necessário criar um deployment.yaml e um service.yaml para o rabbit
+
+3. Criar um chart para os microserviços:
+
 
 ### Objetivo:
 -  Criar um cluster Kubernetes com o Kind.
@@ -30,14 +49,14 @@
     kind load docker-image consumer:latest --name meu-cluster    
     ```
 
-4. Aplicando recursos no kubernetes:
+5. Criando o helm:
 
-    ```
-    kubectl apply -f rabbitmq/deployment.yaml
-    kubectl apply -f rabbitmq/service.yaml
-    kubectl apply -f producer-deployment.yaml
-    kubectl apply -f consumer-deployment.yaml
-    ```
+    `helm create helm`
+    adicionar no values.yaml, em image: tag: "latest"
+
+5.1 criando o chart:
+
+    `helm install kube-rabbit helm` 
 
 6. Fazendo um port-forward para a porta do serviço:
 
@@ -48,4 +67,5 @@ agora a fila do rabbit deve estar registrando as mensagens entre as duas apis
 ### Comandos úteis
 - `kubectl get pods`
 - `kubectl get svc`
-
+- `kubectl get logs <pod>`
+- `helm uninstall <release>`

@@ -1,6 +1,6 @@
 const amqp = require('amqplib/callback_api');
 
-const RABBIT_URL = 'amqp://rabbitmq-service';
+const RABBIT_URL = 'amqp://rabbitmq';
 const QUEUE = 'messages';
 
 amqp.connect(RABBIT_URL, (err, conn) => {
