@@ -45,9 +45,7 @@
 - `kind get clusters`
 - `kind delete cluster --name <cluster>`
 
-### Extras
-
-## Deployment e Service
+### Deployment e Service
 | Característica        | **Deployment**                                          | **Service**                                               |
 |-----------------------|---------------------------------------------------------|-----------------------------------------------------------|
 | **Objetivo**           | Gerenciar o ciclo de vida dos pods (criação, escala, atualização). | Expor os pods e fornecer um ponto de acesso estável.       |
